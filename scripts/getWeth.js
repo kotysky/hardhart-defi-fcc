@@ -20,7 +20,7 @@ async function getWeth() {
 
     const tx = await iWeth.deposit({ value: AMOUNT })
     await tx.wait(1)
-    console.log("hola")
+
     const wethBalance = await iWeth.balanceOf(deployer)
     console.log("Got", wethBalance.toString(), " ETH")
 }
